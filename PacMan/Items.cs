@@ -12,12 +12,18 @@ namespace PacMan
     {
         public static List<Obj> ObjList = new List<Obj>();
         public static Pacman Pacman;
-        public static Ghost Blinki;
+        public static Ghost Red;
+        public static Ghost Blue;
+        public static Ghost Pink;
+        public static Ghost Orange;
 
         public static void Initialize()
         {
-            ObjList.Add(Pacman = new Pacman(new Vector2(240, 450), "pac0"));
-            ObjList.Add(Blinki = new Ghost(new Vector2(300, 450), "baddie1"));
+            ObjList.Add(Pacman = new Pacman(new Vector2(240, 450), "pacman"));
+            ObjList.Add(Red = new Ghost(new Vector2(330, 450), "redGhost"));
+            ObjList.Add(Blue = new Ghost(new Vector2(450, 450), "blueGhost"));
+            ObjList.Add(Orange = new Ghost(new Vector2(570, 450), "orangeGhost"));
+            ObjList.Add(Pink = new Ghost(new Vector2(700, 450), "pinkGhost"));
 
         }
     }

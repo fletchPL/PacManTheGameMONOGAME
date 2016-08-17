@@ -38,6 +38,7 @@
     <ApplicationIcon>Game.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Enum.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Ghost.cs" />
     <Compile Include="Items.cs" />

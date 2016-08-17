@@ -59,8 +59,23 @@ namespace PacMan
 
             if(elipsedTime > frameTime ) //if ET is bigger than FT we need to switch frame 
             {
+                currentFrame++;
 
+                if(currentFrame == FrameCoutn)
+                {
+                    currentFrame = 0;
+
+                    if(!IsLooping)
+                    {
+                        IsActive = false;
+                    }
+                }
+                elipsedTime = 0;
             }
+            sourceRect = new Rectangle(currentFrame * FrameWidth, 0, FrameWidth, FrameHeight);
+            DestinationRect = new Rectangle((int)Position.X - (int)(FrameWidth*scale)/2, (int)Position.Y - (int)(FrameHeight*scale)/2, (int)(FrameWidth*scale),(int)(FrameHeight*scale));
+           
+
         }
 
 

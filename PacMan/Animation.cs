@@ -31,7 +31,37 @@ namespace PacMan
         public float Rotation;                                  //the rotation value of animation
 
 
+        public void Initialize(Texture2D texture, Vector2 position, int frameWidth, int frameHeigt, int frameCount, int frameTime,Color color, float scale, bool looping, int startFrame)
+        {
+            this.color = color;
+            this.FrameWidth = frameWidth;
+            this.FrameHeight = frameHeigt;
+            this.FrameCoutn = frameCount;
+            this.frameTime = frameTime;
+            this.scale = scale;
 
+            IsLooping = looping;
+            Position = position;
+            SpritesStrip = texture;
+
+            elipsedTime = 0;
+
+            currentFrame = startFrame;
+
+            IsActive = true;
+        }
+        
+        public void Update(GameTime gameTime)
+        {
+            if (!IsActive) return;
+
+            elipsedTime += (int)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if(elipsedTime > frameTime ) //if ET is bigger than FT we need to switch frame 
+            {
+
+            }
+        }
 
 
     }

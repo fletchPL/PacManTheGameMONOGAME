@@ -13,6 +13,9 @@ namespace PacMan
 {
     class Pacman : Obj
     {
+        private KeyboardState currentKeyboardState;
+        private KeyboardState previousKeyboardState;
+
         public Pacman(Vector2 pos, string texctureName)
         {
             TextureName = texctureName;
@@ -24,6 +27,38 @@ namespace PacMan
 
         public override void Update(GameTime gameTime)
         {
+            currentKeyboardState = Keyboard.GetState();
+
+            if (!isAlive) return;
+
+            if (currentKeyboardState.IsKeyDown(Keys.Up))
+            {
+                Rotation = (int)RotationEnum.North;
+
+                Position.Y -= Speed;
+            }
+
+            if (currentKeyboardState.IsKeyDown(Keys.Down))
+            {
+                Rotation = (int)RotationEnum.South;
+
+                Position.Y += Speed;
+            }
+
+            if (currentKeyboardState.IsKeyDown(Keys.Right))
+            {
+                Rotation = (int)RotationEnum.East;
+                Position.X += Speed;
+            }
+
+            if (currentKeyboardState.IsKeyDown(Keys.Left))
+            {
+                Rotation = (int)RotationEnum.West;
+                Position.X -= Speed;
+            }
+
+
+            previousKeyboardState = currentKeyboardState;
             base.Update(gameTime);
         }
 

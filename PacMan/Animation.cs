@@ -78,6 +78,16 @@ namespace PacMan
 
         }
 
-
+        public void Draw(SpriteBatch spriteBatch, Vector2 origin, bool walking)
+        {
+            if(IsActive)
+            {
+                if(!walking)
+                {
+                    sourceRect = new Rectangle(0, 0, FrameWidth, FrameHeight); // if not walking go to first picture
+                }
+                spriteBatch.Draw(SpritesStrip, DestinationRect, sourceRect, color, MathHelper.ToRadians(Rotation), origin, SpriteEffects.None, 0);
+            }
+        }
     }
 }

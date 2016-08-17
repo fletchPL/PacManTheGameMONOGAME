@@ -48,12 +48,12 @@ namespace PacMan
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
-            foreach(Obj o in Items.ObjList)
+            spriteBatch.Begin();
+            foreach (Obj o in Items.ObjList)
             {
                 o.Draw(spriteBatch);
             }
-
+            spriteBatch.End();
             base.Draw(gameTime);
         }
     }

@@ -42,9 +42,9 @@ namespace PacMan
         {
             if (!isAlive) return;
 
-            spriteBatch.Begin();
+          
             spriteBatch.Draw(Texture, Position, null, Color.White, MathHelper.ToRadians(Rotation), Center, Scale, SpriteEffects.None, 0);
-            spriteBatch.End();
+            
         }
 
     }

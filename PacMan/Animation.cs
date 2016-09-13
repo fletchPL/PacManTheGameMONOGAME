@@ -89,5 +89,13 @@ namespace PacMan
                 spriteBatch.Draw(SpritesStrip, DestinationRect, sourceRect, color, MathHelper.ToRadians(Rotation), origin, SpriteEffects.None, 0);
             }
         }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            if(IsActive)
+            {
+                spriteBatch.Draw(SpritesStrip, DestinationRect, sourceRect, color);
+            }
+        }
     }
 }

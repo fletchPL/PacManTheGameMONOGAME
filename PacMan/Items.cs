@@ -19,7 +19,7 @@ namespace PacMan
 
         public static void Initialize()
         {
-            ObjList.Add(Pacman = new Pacman(new Vector2(240, 450), "pacman"));
+            ObjList.Add(Pacman = new Pacman(new Vector2(240, 450), "pacman_animation"));
             ObjList.Add(Red = new Ghost(new Vector2(330, 450), "redGhost"));
             ObjList.Add(Blue = new Ghost(new Vector2(450, 450), "blueGhost"));
             ObjList.Add(Orange = new Ghost(new Vector2(570, 450), "orangeGhost"));

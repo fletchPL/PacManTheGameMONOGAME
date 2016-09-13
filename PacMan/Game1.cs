@@ -9,10 +9,13 @@ namespace PacMan
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        public static Game1 PacmanGame;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            PacmanGame = this;
         }
 
         protected override void Initialize()

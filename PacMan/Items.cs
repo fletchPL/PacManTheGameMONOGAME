@@ -21,9 +21,9 @@ namespace PacMan
         {
             ObjList.Add(Pacman = new Pacman(new Vector2(240, 450), "pacman_animation"));
             ObjList.Add(Red = new Ghost(new Vector2(330, 450), "red_ghost_animation",2));
-            ObjList.Add(Blue = new Ghost(new Vector2(450, 450), "blueGhost",4));
-            ObjList.Add(Orange = new Ghost(new Vector2(570, 450), "orangeGhost",6));
-            ObjList.Add(Pink = new Ghost(new Vector2(700, 450), "pinkGhost", 0));
+            ObjList.Add(Blue = new Ghost(new Vector2(450, 450), "red_ghost_animation", 4));
+            ObjList.Add(Orange = new Ghost(new Vector2(570, 450), "red_ghost_animation", 6));
+            ObjList.Add(Pink = new Ghost(new Vector2(700, 450), "red_ghost_animation", 0));
 
         }
     }

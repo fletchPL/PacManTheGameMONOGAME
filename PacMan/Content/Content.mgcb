@@ -97,3 +97,15 @@
 /processorParam:TextureFormat=Color
 /build:red_ghost_animation.png
 
+#begin bg1.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:bg1.wav
+
+#begin paceat.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:paceat.wav
+
